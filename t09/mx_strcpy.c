@@ -1,9 +1,15 @@
+#include <stdlib.h>
 char *mx_strcpy(char *dst, const char *src)
 {
-
-    for (int count = 0; src[count] != '\0'; ++count)
+    if (src == NULL || dst == NULL)
     {
-        dst[count] = src[count];
+        return NULL;
     }
-    return dst;
+    char *saved = dst;
+    while (*src)
+    {
+        *dst++ = *src++;
+    }
+    *dst = 0;
+    return saved;
 }

@@ -3,7 +3,7 @@ int mx_factorial_iter(int n)
 {
     int counter = 0;
     int result = 1;
-    if (n > 0 || n <= 5)
+    if (n >= 0)
     {
         while (counter != n)
         {
@@ -15,7 +15,7 @@ int mx_factorial_iter(int n)
     {
         return 0;
     }
-    if (result > 2147483647)
+    if (result >= 1932053504)
     {
         return 0;
     }
